@@ -17,8 +17,7 @@ This project is a Flask-based MCP server for the AI Intern Assignment, simulatin
 ├── requirements.txt
 ├── claude_desktop_config.json
 ├── Sample_Responses.txt
-└── README.md
-
+└── README.md ```
 
 
 ## Setup Instructions

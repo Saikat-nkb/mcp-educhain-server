@@ -11,7 +11,7 @@ This project is a Flask-based MCP server for the AI Intern Assignment, simulatin
 ## Project structure
 
  
- mcp-educhain-server/
+``` mcp-educhain-server/
 ├── main.py
 ├── educhain_tools.py
 ├── requirements.txt

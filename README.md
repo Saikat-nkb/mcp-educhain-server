@@ -9,6 +9,8 @@ This project is a Flask-based MCP server for the AI Intern Assignment, simulatin
 - **generate_flashcards:** Generate flashcards for any topic (bonus tool).
 
 ## Project structure
+
+ 
  mcp-educhain-server/
 ├── main.py
 ├── educhain_tools.py

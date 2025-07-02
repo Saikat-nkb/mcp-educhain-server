@@ -7,7 +7,7 @@ This script sets up a Flask-based MCP server exposing educational tools
 that generate multiple-choice questions, lesson plans, and flashcards.
 The server is designed for integration with Claude Desktop.
 
-Author: Your Name
+Author: SAIKAT CHATTERJEE
 Citations:
 - EduChain: https://github.com/satvik314/educhain
 - MCP Protocol Documentation

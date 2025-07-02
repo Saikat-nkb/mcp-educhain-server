@@ -1,4 +1,4 @@
-# EduChain MCP Server (Mock Implementation)
+# EduChain MCP Server 
 
 This project is a Flask-based MCP server for the AI Intern Assignment, simulating EduChain integration with three educational tools/resources for Claude Desktop.
 

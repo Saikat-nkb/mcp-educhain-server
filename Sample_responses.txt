@@ -1,0 +1,67 @@
+Command: Generate 5 multiple-choice questions on Python loops.
+Request:
+{
+  "tool": "generate_mcq",
+  "params": {
+    "topic": "Python loops",
+    "level": "Beginner",
+    "num": 5
+  }
+}
+Response:
+{
+  "tool": "generate_mcq",
+  "topic": "Python loops",
+  "level": "Beginner",
+  "questions": [
+    {
+      "question": "What is a key concept in Python loops?",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "correct_answer": "Option A"
+    },
+    ...
+  ]
+}
+
+Command: Provide a lesson plan for teaching algebra.
+Request:
+{
+  "tool": "generate_lesson_plan",
+  "params": {
+    "topic": "algebra",
+    "level": "Beginner"
+  }
+}
+Response:
+{
+  "tool": "generate_lesson_plan",
+  "topic": "algebra",
+  "level": "Beginner",
+  "lesson_plan": {
+    "objectives": ["Understand the basics of algebra"],
+    "outline": ["Introduction to algebra", "Core concepts of algebra", "Practice problems for algebra"],
+    "activities": ["Group discussion on algebra", "Quiz on algebra"]
+  }
+}
+
+Command: Generate flashcards on World War II.
+Request:
+{
+  "tool": "generate_flashcards",
+  "params": {
+    "topic": "World War II",
+    "level": "Beginner",
+    "num": 3
+  }
+}
+Response:
+{
+  "tool": "generate_flashcards",
+  "topic": "World War II",
+  "level": "Beginner",
+  "flashcards": [
+    {"question": "What is World War II concept #1?", "answer": "World War II answer #1"},
+    {"question": "What is World War II concept #2?", "answer": "World War II answer #2"},
+    {"question": "What is World War II concept #3?", "answer": "World War II answer #3"}
+  ]
+}

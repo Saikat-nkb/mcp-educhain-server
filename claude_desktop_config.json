@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "EduChainServer": {
+      "command": "python",
+      "args": ["main.py"],
+      "tools": [
+        {
+          "name": "generate_mcq",
+          "description": "Generate multiple-choice questions for a given topic.",
+          "endpoint": "/mcp"
+        },
+        {
+          "name": "generate_lesson_plan",
+          "description": "Generate a lesson plan for a given topic.",
+          "endpoint": "/mcp"
+        },
+        {
+          "name": "generate_flashcards",
+          "description": "Generate flashcards for a given topic.",
+          "endpoint": "/mcp"
+        }
+      ]
+    }
+  }
+}

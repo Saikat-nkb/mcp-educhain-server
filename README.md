@@ -34,14 +34,14 @@ This project is a Flask-based MCP server for the AI Intern Assignment, simulatin
 
 ## Testing
 - Use Postman or Claude Desktop to send POST requests to `http://127.0.0.1:5000/mcp` with JSON like:
-{
+```{
   "tool": "generate_mcq",
   "params": {
     "topic": "Python loops",
     "level": "Beginner",
     "num": 5
   }
-}
+}```
 ## With Claude Desktop
 Place claude_desktop_config.json in the same directory as Claude Desktop or import it via the app's settings.
 

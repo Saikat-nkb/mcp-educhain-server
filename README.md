@@ -9,19 +9,24 @@ This project is a Flask-based MCP server for the AI Intern Assignment, simulatin
 - **generate_flashcards:** Generate flashcards for any topic (bonus tool).
 
 ## Project structure
- mcp-educhain-server/
+``` mcp-educhain-server/
 ├── main.py
 ├── educhain_tools.py
 ├── requirements.txt
 ├── claude_desktop_config.json
 ├── Sample_Responses.txt
 └── README.md
-
+├── templates/
+│   └── index.html
+└── static/
+    └── style.css
+```
 
 
 ## Setup Instructions
 
 1. Clone the repo.
+ 
 
 2. Install dependencies:
    pip install -r requirements.txt
@@ -55,6 +60,34 @@ Provide a lesson plan for teaching algebra.
 Generate flashcards on World War II.
 
 ## See Sample_Responses.txt for example commands and responses.
+
+## Deployment (Render.com)
+You can deploy this project for free using Render.com:
+
+Push all files to GitHub .
+
+Sign up or log in at Render.com.
+
+Create a new Web Service:
+
+Build command:
+
+```text
+ pip install -r requirements.txt
+ ```
+
+Start command:
+
+```text
+```gunicorn main:app
+
+Connect your GitHub repo.
+
+Deploy and get your public URL.
+
+Access your app:
+The web frontend will be available at the root URL, and the MCP API at /mcp.
+
 
 ## Citation
 This project uses and references the following resources:

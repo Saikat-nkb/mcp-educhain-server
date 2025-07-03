@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduChain MCP Frontend</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>EduChain MCP Educational Tools</h1>
+        <form id="mcpForm">
+            <label for="tool">Select Tool:</label>
+            <select id="tool" name="tool" required>
+                <option value="generate_mcq">Generate MCQs</option>
+                <option value="generate_lesson_plan">Generate Lesson Plan</option>
+                <option value="generate_flashcards">Generate Flashcards</option>
+            </select>
+
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic" name="topic" placeholder="e.g., Python loops" required>
+
+            <label for="level">Level:</label>
+            <select id="level" name="level">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+
+            <label for="num">Number (for MCQs/Flashcards):</label>
+            <input type="number" id="num" name="num" min="1" max="20" value="5">
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        document.getElementById("mcpForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const tool = document.getElementById("tool").value;
+            const topic = document.getElementById("topic").value;
+            const level = document.getElementById("level").value;
+            const num = document.getElementById("num").value;
+
+            const params = { topic, level };
+            if (tool === "generate_mcq" || tool === "generate_flashcards") {
+                params.num = num;
+            }
+
+            const response = await fetch("/mcp", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ tool, params })
+            });
+            const data = await response.json();
+
+            let html = "<h2>Result:</h2><pre>" + JSON.stringify(data, null, 2) + "</pre>";
+            document.getElementById("result").innerHTML = html;
+        });
+    </script>
+</body>
+</html>

@@ -14,7 +14,7 @@ Citations:
 
 """
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 from educhain_tools import (
     generate_mcq,
     generate_lesson_plan,
@@ -30,6 +30,11 @@ TOOL_MAP = {
     "generate_lesson_plan": generate_lesson_plan,
     "generate_flashcards": generate_flashcards
 }
+#for frontend  rendering
+
+@app.route("/", methods=["GET"])
+def home():
+    return render_template("index.html")
 
 @app.route("/mcp", methods=["POST"])
 def mcp_endpoint():

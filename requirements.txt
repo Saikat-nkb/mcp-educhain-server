@@ -1,2 +1,3 @@
 flask
 educhain @ git+https://github.com/satvik314/educhain.git
+gunicorn
